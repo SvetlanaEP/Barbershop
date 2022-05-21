@@ -1,0 +1,23 @@
+.page-header {
+  display: flex;
+  flex-direction: column;
+
+  background-color: #242424;
+  color: white;
+}
+
+.page-header__logo {
+  min-height: 85px;
+
+  outline: 5px solid red;
+  outline-offset: -5px;
+
+  @media (min-width: $tablet-width) {
+      order: 2;
+      min-height: 400px;
+    }
+
+    @media (min-width: $desktop-width) {
+      height: 648px;
+    }
+}
