@@ -1,5 +1,10 @@
 @import "global/variables.scss";
 @import "global/fonts.scss";
+@import "global/global";
 
+@import "blocks/page";
 @import "blocks/page-header.scss";
 @import "blocks/main-nav.scss";
+@import "blocks/site-list";
+@import "blocks/user-list";
+@import "blocks/stats";

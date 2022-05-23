@@ -9,9 +9,6 @@
 .page-header__logo {
   min-height: 85px;
 
-  outline: 5px solid red;
-  outline-offset: -5px;
-
   @media (min-width: $tablet-width) {
       order: 2;
       min-height: 400px;
