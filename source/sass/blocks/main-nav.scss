@@ -4,6 +4,11 @@
   min-height: 51px;
   background-color: #826550;
 
+  @media (min-width: $tablet-width) {
+    background-color: black;
+
+  }
+
 }
 
 .main-nav__toggle {
@@ -21,6 +26,10 @@
   &:hover,
   &:active {
     background-color: #624530;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
   }
 }
 
