@@ -19,30 +19,95 @@
 }
 
 .stats__header {
+  padding: 28px 20px;
   background-color: white;
   color: black;
 }
 
 .stats__slogan {
-  margin: 0;
+  margin: 0 0 13px;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1;
+  font-weight: bold;
+  font-size: 30px;
 }
 
 .stats__intro {
   margin: 0;
+  font-size: 20px;
+  line-height: 1.35;
+  text-align: center;
+
+  @media(max-width: $mobile-width-only) {
+    br {
+      display: none;
+    }
+  }
 }
 
 .stats__legend {
   margin: 0;
+  display: block;
+  font-size: 20px;
+  line-height: 1;
 }
 
 .stats__legend--top {
+
+  color: fade_out(#000, 0.3);
   @media (max-width: $mobile-width-only) {
     display: none;
   }
 }
 
 .stats__legend--bottom {
+  text-align: center;
+  color: fade_out(#fff, 0.3);
   @media (min-width: $tablet-width) {
     display: none;
   }
+}
+
+.stats__list {
+  margin: 0 0 20px;
+  background-color: #353535;
+}
+
+.stats__item {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.stats__item:nth-child(1) {
+  background-color: fade_out(#fff, 0.95);
+}
+
+.stats__item:nth-child(2) {
+  background-color: fade_out(#fff, 0.88);
+}
+
+.stats__item:nth-child(4) {
+  background-color: fade_out(#fff, 0.88);
+}
+
+.stats__number {
+  line-height: 1;
+  font-weight: bold;
+  font-size: 40px;
+
+  sup {
+    position: static;
+    margin-left: 5px;
+    vertical-align: baseline;
+    font-size: inherit;
+  }
+}
+
+.stats__description {
+  margin: 0;
+  text-align: right;
+  line-height: 1;
+  font-size: 18px;
 }
