@@ -40,6 +40,14 @@
       top: 42px;
     }
   }
+
+  @media(min-width: $desktop-width) {
+    grid-template-columns: auto;
+    grid-template-rows: min-content 1fr min-content;
+    align-content: start;
+
+
+  }
 }
 
 .stats__slogan {
@@ -55,6 +63,11 @@
     text-align: left;
     text-transform: none;
     font-size: 40px;
+  }
+
+  @media(min-width: $desktop-width) {
+    margin-bottom: 32px;
+
   }
 }
 
@@ -74,6 +87,10 @@
     padding-top: 4px;
     padding-left: 34px;
     text-align: left;
+  }
+
+  @media(min-width: $desktop-width) {
+    padding-left: 0;
   }
 }
 
@@ -107,6 +124,10 @@
   @media(min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+
+  @media(min-width: $desktop-width) {
+    margin: 0;
 
   }
 }
