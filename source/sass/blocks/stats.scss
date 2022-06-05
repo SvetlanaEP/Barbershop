@@ -5,11 +5,20 @@
 
 .stats__wrapper {
   @media (min-width: $tablet-width) {
+    $stats-shift: -179px;
+
     padding: 0 64px;
+    position: relative;
+    top: $stats-shift;
+    margin-bottom: $stats-shift;
   }
 
   @media (min-width: $desktop-width) {
+    $stats-shift: -159px;
+
+    top: $stats-shift;
     margin: auto;
+    margin-bottom: $stats-shift;
     max-width: 960px;
 
     display: grid;
