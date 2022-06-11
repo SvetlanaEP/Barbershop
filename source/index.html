@@ -12,7 +12,7 @@
     <a class="page-header__logo">
         <img src="img/logotype-mobile.svg" width="226" height="30" alt="Барбершоп «Бородинский»">
     </a>
-    <nav class="main-nav">
+    <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
         </button>
@@ -45,14 +45,20 @@
                 </li>
 
             </ul>
-            <div class="main-nav__list user-list">
-                <a class="user-list__login" href="login.html">
-                    <svg class="user-list__login-icon" width="16" height="16">
-                        <use xlink:href="img/sprite.svg#icon-login"></use>    <!-- ЧТО-ТО НЕ ПОНЯТНОЕ-->
-                    </svg>
-                    Войти
-                </a>
-            </div>
+            <ul class="main-nav__list user-list">
+                <li class="user-list__item">
+                    <a class="user-list__login" href="login.html">
+                        <svg class="user-list__login-icon" width="16" height="16"
+                             viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 2H14V14H7V16H16V0H7V2Z" fill="white"/>
+                            <path d="M7 9H0V7H7V4L11 8L7 12V9Z" fill="white"/>
+                        </svg>
+                        </svg>
+                        <span>Войти</span>
+                    </a>
+                </li>
+
+            </ul>
         </div>
     </nav>
 </header>
@@ -63,13 +69,13 @@
     <section class="stats">
         <div class="stats__wrapper">
             <header class="stats__header">
-                <h2 class="visually-hiddden">Статистика</h2>
+                <h2 class="visually-hidden">Статистика</h2>
                 <p class="stats__slogan">
                     Стрижка у нас<br>
                     это выгодно!
                 </p>
                 <p class="stats__intro">
-                    Мужская стрижка требует точного<br> подхода. Обратимся к статистике:
+                    Мужская стрижка требует <br>точного подхода. Обратимся <br> к статистике:
                 </p>
                 <p class="stats__legend stats__legend--top">
                     <small>
@@ -83,7 +89,7 @@
                         1 500<sup>*</sup>
                     </dt>
                     <dd class="stats__description">
-                        рублей<br>
+                        рублей <br>
                         вложений
                     </dd>
                 </div>
@@ -92,7 +98,7 @@
                         7 200
                     </dt>
                     <dd class="stats__description">
-                        секунд<br>
+                        секунд <br>
                         времени мастера
                     </dd>
                 </div>
@@ -101,7 +107,7 @@
                         90 000
                     </dt>
                     <dd class="stats__description">
-                        постриженных<br>
+                        постриженных <br>
                         волос
                     </dd>
                 </div>
@@ -110,7 +116,7 @@
                         500 000<sup>*</sup>
                     </dt>
                     <dd class="stats__description">
-                        лайков и<br>
+                        лайков и <br>
                         комплиментов
                     </dd>
                 </div>
@@ -140,7 +146,7 @@
                         футбола или кино. Во всяком случае внешне.
                     </p>
                 </li>
-                <li class="advantages__item advantages__item--price slider__item">
+                <li class="advantages__item advantages__item--expensive slider__item">
                     <h3 class="advantages__title">Дорого</h3>
                     <p class="advantages__description">
                         Наши мастера - профессионалы своего дела не могут стоить дёшево.
@@ -240,6 +246,23 @@
 </main>
 
 @@include('parts-html/footer.html')
+
+<script>
+    let navMain = document.querySelector(".main-nav");
+    let navToggle = document.querySelector(".main-nav__toggle")
+
+    navMain.classList.remove("main-nav--nojs");
+
+    navToggle.addEventListener("click", function () {
+        if (navMain.classList.contains("main-nav--closed")) {
+            navMain.classList.remove("main-nav--closed");
+            navMain.classList.add ("main-nav--opened");
+        } else {
+            navMain.classList.add("main-nav--closed");
+            navMain.classList.remove("main-nav--opened")
+        }
+    })
+</script>
 
 </body>
 </html>
