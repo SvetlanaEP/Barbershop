@@ -120,6 +120,7 @@
 
 .stats__legend--bottom {
   text-align: center;
+  padding-bottom: 40px;
   color: fade_out(#fff, 0.3);
   @media (min-width: $tablet-width) {
     display: none;
