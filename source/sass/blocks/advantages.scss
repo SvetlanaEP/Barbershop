@@ -1,16 +1,18 @@
 .advantages__wrapper {
   position: relative;
   background-color: #292929;
-  margin: 0 auto 35px;
+  margin: 0 auto;
 
   ::after {
+    $height__grad--advantages: 34px;
+
     position: absolute;
-    bottom: -34px;
+    bottom: -$height__grad--advantages;
     left: 0;
     content: "";
 
     width: 100%;
-    height: 35px;
+    height: $height__grad--advantages;
 
     background-image:
             linear-gradient(to top right, transparent 48%, #c3deef 2%, $darkgrey 50%),
@@ -18,6 +20,18 @@
     background-position: top left, top right;
     background-repeat: no-repeat;
     background-size: 50.1% 100%;
+
+    @media(min-width: $tablet-width) {
+      $height__grad--advantages: 41px;
+      bottom: -$height__grad--advantages;
+      height: $height__grad--advantages;
+    }
+
+    @media(min-width: $desktop-width) {
+      $height__grad--advantages: 64px;
+      bottom: -$height__grad--advantages;
+      height: $height__grad--advantages;
+    }
   }
 }
 
