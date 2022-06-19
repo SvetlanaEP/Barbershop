@@ -41,10 +41,14 @@ function clear() {
    return del('dist')
 }
 
-function copy() {
+function copy_img() {
     return src('./source/img/**/*.*')
-        .pipe(dest('dist/img'))
+        .pipe(dest('dist/img'));
+}
 
+function copy_js() {
+    return src('./source/js/**/*.*')
+        .pipe(dest('dist/js'));
 }
 
 function serve() {
@@ -57,8 +61,9 @@ function serve() {
     watch('source/sass/**.scss', series(scss)).on('change', sync.reload)
     watch('source/sass/blocks/**.scss', series(scss)).on('change', sync.reload)
     watch('source/sass/global/**.scss', series(scss)).on('change', sync.reload)
+    watch('source/js/**.js', series(copy_js)).on('change', sync.reload)
 }
 
-exports.build = series(clear, copy, scss, html)
-exports.serve = series(clear, copy, scss, html, serve)
+exports.build = series(clear, copy_img, copy_js, scss, html)
+exports.serve = series(clear, copy_img, copy_js, scss, html, serve)
 exports.clear = clear
