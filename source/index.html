@@ -184,7 +184,7 @@
                         пополнил наши стройные ряды. Спешите записаться!
                     </p>
                 </li>
-                <li class="news__item">
+                <li class="news__item news__item--none">
                     <time class="news__date" datetime="2017-09-09">
                         <b class="news__day">9</b> сент
                     </time>
@@ -193,7 +193,10 @@
                         подстригитесь и узнаете, в чём здесь подвох!
                     </p>
                 </li>
-                <a class="news__to-all button" href="#">Показать все</a>
+                <button class="news__to-all button">
+                    <span class="button--to-all">Показать все</span>
+                    <span class="button--collapse news__button--none">Свернуть</span>
+                </button>
             </ul>
         </div>
     </section>
@@ -263,6 +266,7 @@
         }
     })
 </script>
+<script src="js/button-news.js"></script>
 
 </body>
 </html>
