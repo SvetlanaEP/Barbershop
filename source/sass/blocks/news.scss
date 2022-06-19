@@ -1,7 +1,6 @@
 .news__wrapper {
   width: auto;
-  padding-top: 68px;
-
+  margin: 68px 20px 0;
 }
 
 .news__title {
@@ -11,25 +10,25 @@
   font-weight: 700;
   line-height: 1;
   margin: 0;
+  
+  }
 }
 
 .news__list {
-  margin: 27px 20px 28px;
+  margin: 27px 0 0;
   padding: 0;
 
   list-style: none;
 
   border-bottom: 1px solid #E5DDD5;
 
-  :first-child {
-    margin-top: 0;
+   :first-child {
 
     &::before {
       display: none;
     }
   }
 }
-
 
 .news__item {
   position: relative;
@@ -66,6 +65,7 @@
   background-color: black;
 
   margin-top: 10px;
+
 
   ::after {
     position: absolute;
