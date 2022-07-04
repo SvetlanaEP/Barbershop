@@ -206,7 +206,7 @@
             <button class="reviews__write button">Оставить свой</button>
             <div class="reviews__list  slider__list">
                 <blockquote class="reviews__item slider__item">
-                    <img class="reviews__author-image" src="img/picture-travis-mobile@1x.jpg"
+                    <img class="reviews__author-image" src="img/reviows_author/picture-travis-mobile@1x.jpg"
                          width="50" height="50" alt="Фото Трэвиса Бакера">
                     <div class="reviews__author-info">
                         <cite class="reviews__author-name">Трэвис Бакер</cite>
@@ -216,8 +216,8 @@
                         </p>
                     </div>
                 </blockquote>
-                <blockquote class="reviews__item slider__item">
-                    <img class="reviews__author-image" src="img/picture-travis-mobile@1x.jpg"
+                <blockquote class="reviews__item slider__item reviews__item--none">
+                    <img class="reviews__author-image" src="img/reviows_author/picture-travis-mobile@1x.jpg"
                          width="50" height="50" alt="Фото Джона Смита">
                     <div class="reviews__author-info">
                         <cite class="reviews__author-name">Джон Смит</cite>
@@ -226,8 +226,8 @@
                         </p>
                     </div>
                 </blockquote>
-                <blockquote class="reviews__item slider__item">
-                    <img class="reviews__author-image" src="img/picture-travis-mobile@1x.jpg"
+                <blockquote class="reviews__item slider__item reviews__item--none">
+                    <img class="reviews__author-image" src="img/reviows_author/picture-travis-mobile@1x.jpg"
                          width="50" height="50" alt="Фото Ивана Бородайло">
                     <div class="reviews__author-info">
                         <cite class="reviews__author-name">Иван Бородайло</cite>
@@ -236,14 +236,18 @@
                         </p>
                     </div>
                 </blockquote>
-                <button class="reviews__prev" type="button">Предыдущий отзыв</button>
-                <button class="reviews__next" type="button">Следующий отзыв</button>
+                <button class="reviews__prev reviews__button" type="button">
+                    <span class="visually-hidden">Предыдущий отзыв</span>
+                </button>
+                <button class="reviews__next reviews__button" type="button">
+                    <span class="visually-hidden">Следующий отзыв</span>
+                </button>
             </div>
-            <p class="reviews__toggles slider__toggles">
+            <div class="reviews__toggles slider__toggles">
                 <button class="slider__toggle slider__toggle--current" type="button">1</button>
                 <button class="slider__toggle" type="button">2</button>
                 <button class="slider__toggle" type="button">3</button>
-            </p>
+            </div>
         </div>
     </section>
 </main>
