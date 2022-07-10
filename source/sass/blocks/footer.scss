@@ -7,6 +7,8 @@
   padding-top: 34px;
 }
 
+/*Контактная информация*/
+
 .page-footer__contacts {
   margin: 33px 20px 17px;
 }
@@ -52,5 +54,54 @@
 .contacts__phone-mobile {
   @media(max-width: $mobile-width-only) {
     display: none;
+  }
+}
+
+/* Соц.сети */
+
+.page-footer__social {
+  margin: 0;
+
+
+}
+
+.social__title {
+   display: none;
+ }
+
+.social__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 101px;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.social__item {
+  border: 1px solid #4A4A4A;
+}
+
+.social__link {
+  color: white;
+  text-decoration: none;
+
+  &--vkontakte {
+    background-image: url("/img/social/vk_icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--facebook {
+    background-image: url("/img/social/fb_icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--instagram {
+    background-image: url("/img/social/instagram_icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }
