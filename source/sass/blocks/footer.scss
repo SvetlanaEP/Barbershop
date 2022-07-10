@@ -1,0 +1,56 @@
+.page-footer {
+  background-color: $darkgrey;
+  color: white;
+}
+
+.page-footer__wrapper {
+  padding-top: 34px;
+}
+
+.page-footer__contacts {
+  margin: 33px 20px 17px;
+}
+
+.contacts {
+  text-align: center;
+}
+
+.contacts__title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 27px;
+}
+
+.contacts__text {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+
+  margin: 0;
+  padding: 0;
+}
+
+.button--footer {
+  @media(max-width: $mobile-width-only) {
+    display: block;
+    width: 280px;
+    height: 50px;
+
+    border: 1px solid #4A4A4A;
+  }
+}
+
+.contacts__phone {
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  text-decoration: none;
+
+  margin: 17px auto 26px;
+}
+
+.contacts__phone-mobile {
+  @media(max-width: $mobile-width-only) {
+    display: none;
+  }
+}
