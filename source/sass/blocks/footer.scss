@@ -57,12 +57,11 @@
   }
 }
 
+
 /* Соц.сети */
 
 .page-footer__social {
   margin: 0;
-
-
 }
 
 .social__title {
@@ -104,4 +103,30 @@
     background-repeat: no-repeat;
     background-position: center;
   }
+}
+
+/* Разработано */
+
+.page-footer__copyright {
+  margin: 31px 0 24px;
+  padding-bottom: 24px;
+
+  text-align: center;
+}
+
+.copyright__link {
+  margin: 13px auto 0;
+  text-decoration: none;
+  color: white;
+
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 50px;
+  text-transform: uppercase;
+}
+
+.copyright__text {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 0;
 }
