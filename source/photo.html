@@ -12,7 +12,7 @@
     <a class="page-header__logo" href="index.html">
         <img src="img/logotype-mobile.svg" width="226" height="30" alt="Барбершоп «Бородинский»">
     </a>
-    <nav class="main-nav">
+    <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
         </button>
@@ -45,14 +45,17 @@
                 </li>
 
             </ul>
-            <div class="main-nav__list user-list">
+            <ul class="main-nav__list user-list">
+              <li class="user-list__item">
                 <a class="user-list__login" href="login.html">
-                    <svg class="user-list__login-icon" width="16" height="16">
-                        <use xlink:href="img/sprite.svg#icon-login"></use>    <!-- ЧТО-ТО НЕ ПОНЯТНОЕ-->
-                    </svg>
-                    Войти
+                  <svg class="user-list__login-icon" width="16" height="16">
+                    <use xlink:href="img/sprite.svg#icon-login"></use>    <!-- ЧТО-ТО НЕ ПОНЯТНОЕ-->
+                  </svg>
+                  Войти
                 </a>
-            </div>
+              </li>
+
+            </ul>
         </div>
     </nav>
 </header>
@@ -187,5 +190,6 @@
 
 @@include('parts-html/footer.html')
 
+<script src="js/main-nav.js"></script>
 </body>
 </html>
