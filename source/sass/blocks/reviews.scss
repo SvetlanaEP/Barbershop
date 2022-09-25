@@ -112,6 +112,19 @@
   margin-top: 10px;
   width: 50px;
   height: 50px;
+
+  @media(min-width: $tablet-width) {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    outline: transparent;
+  }
+
+  @media(min-width: $desktop-width) {
+    width: 249px;
+    height: 160px;
+    border-radius: 0;
+  }
 }
 
 .reviews__author-info {
