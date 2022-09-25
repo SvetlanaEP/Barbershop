@@ -202,4 +202,46 @@
   display: none;
 }
 
+.reviews__toggles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 23px;
+  margin: 0 auto;
+  align-items: center;
+
+  @media(min-width: $tablet-width) {
+    position: relative;
+    width: 126px;
+    background-color: $lightgrey;
+    margin-top: -5px;
+    left: 50%;
+    margin-left: -63px;
+  }
+
+  @media(min-width: $desktop-width) {
+    margin-top: 42px;
+
+  }
+}
+
+.slider__toggle {
+  padding: 0;
+  width: 10px;
+  height: 10px;
+  border: 2px solid #353535;
+  background-color: transparent;
+  transform: rotate(45deg);
+
+  @media(max-width: $mobile-width-only) {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.slider__toggle--current {
+  background-color: #353535;
+}
+
 
