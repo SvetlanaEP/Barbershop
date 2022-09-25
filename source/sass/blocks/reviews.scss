@@ -1,23 +1,25 @@
 .reviews {
-  position: relative;
-  padding-bottom: 18px;
+  @media (max-width: $mobile-width-only) {
+    position: relative;
+    padding-bottom: 18px;
 
-  ::after {
-    $height__grad: 34px;
+    ::after {
+      $height__grad: 34px;
 
-    position: absolute;
-    content: '';
+      position: absolute;
+      content: '';
 
-    left: 0;
-    bottom: -$height__grad;
-    width: 100%;
-    height: $height__grad;
+      left: 0;
+      bottom: -$height__grad;
+      width: 100%;
+      height: $height__grad;
 
-    background-image: linear-gradient(to top right, transparent 48%, #454444 2%, $lightgrey 50%),
-    linear-gradient(to top left, transparent 48%, #454444 2%, $lightgrey 50%);
-    background-position: top left, top right;
-    background-repeat: no-repeat;
-    background-size: 50.1% 100%;;
+      background-image: linear-gradient(to top right, transparent 48%, #454444 2%, $lightgrey 50%),
+      linear-gradient(to top left, transparent 48%, #454444 2%, $lightgrey 50%);
+      background-position: top left, top right;
+      background-repeat: no-repeat;
+      background-size: 50.1% 100%;
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -32,14 +34,15 @@
   margin: 27px 20px 0;
 
   @media(min-width: $tablet-width){
+    position: relative;
     align-items: center;
 
-    margin: 37px 64px 0;
+    margin: 37px 64px 55px;
   }
 
   @media (min-width: $desktop-width) {
     width: 960px;
-    margin: 37px auto;
+    margin: 37px auto 46px;
 
   }
 }
@@ -67,17 +70,12 @@
     display: block;
     position: absolute;
     top: 0;
-    right: 64px;
-
-    &::after {
-      display: none;
-    }
+    right: 0;
   }
 
   @media(min-width: $desktop-width) {
     right: 0;
     left: 800px;
-
   }
 }
 
@@ -87,6 +85,7 @@
   @media(min-width: $tablet-width) {
     margin: 48px 0 0;
     display: grid;
+    height: 160px;
     grid-template-columns: 50px auto 50px;
   }
 
@@ -101,12 +100,13 @@
   justify-content: center;
 
   @media(min-width: $tablet-width) {
-    padding: 35px 30px;
+    padding: 30px 30px 0;
     border-top: 1px solid #E5DDD5;
     border-bottom: 1px solid #E5DDD5;
   }
 
   @media(min-width: $desktop-width) {
+    padding: 0;
     border: 1px solid #E5DDD5;
   }
 }
@@ -115,9 +115,21 @@
   outline: 1px solid #353535;
   outline-offset: -1px;
 
-  margin-top: 10px;
   width: 50px;
   height: 50px;
+
+  @media(min-width: $tablet-width) {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    outline: transparent;
+  }
+
+  @media(min-width: $desktop-width) {
+    width: 249px;
+    height: 160px;
+    border-radius: 0;
+  }
 }
 
 .reviews__author-info {
@@ -150,6 +162,7 @@
 }
 
 .reviews__button {
+  position: relative;
   display: none;
   margin: 0;
   padding: 0;
@@ -162,16 +175,79 @@
 }
 
 .reviews__prev {
-  display: none;
 
   @media(min-width: $tablet-width) {
-    display: block;
     order: -1;
+
+    &::before {
+      position: absolute;
+      content: "";
+      border: 12px solid transparent;
+      border-right: 12px solid black;
+      top: 74px;
+      right: 20px;
+    }
+  }
+}
+
+.reviews__next {
+  @media(min-width: $tablet-width) {
+
+    &::before {
+      position: absolute;
+      content: "";
+      border: 12px solid transparent;
+      border-left: 12px solid black;
+      top: 74px;
+      left: 20px;
+    }
   }
 }
 
 .reviews__item--none {
   display: none;
+}
+
+.reviews__toggles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 23px;
+  margin: 0 auto;
+  align-items: center;
+
+  @media(min-width: $tablet-width) {
+    position: relative;
+    width: 126px;
+    background-color: $lightgrey;
+    margin-top: -5px;
+    left: 50%;
+    margin-left: -63px;
+  }
+
+  @media(min-width: $desktop-width) {
+    margin-top: 42px;
+
+  }
+}
+
+.slider__toggle {
+  padding: 0;
+  width: 10px;
+  height: 10px;
+  border: 2px solid #353535;
+  background-color: transparent;
+  transform: rotate(45deg);
+
+  @media(max-width: $mobile-width-only) {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.slider__toggle--current {
+  background-color: #353535;
 }
 
 
