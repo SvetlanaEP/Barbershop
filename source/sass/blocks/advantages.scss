@@ -84,3 +84,19 @@
   font-weight: 500;
   line-height: 27px;
 }
+
+.advantages__toggles {
+  padding-bottom: 12px;
+
+  @media(min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.advantages__toggles .slider__toggle {
+  border: 2px solid white;
+}
+
+.advantages__toggles .slider__toggle--current {
+  background-color: white;
+}
