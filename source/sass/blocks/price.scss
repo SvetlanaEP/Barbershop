@@ -1,0 +1,60 @@
+.price-list {
+  background-color: #353535;
+  color: white;
+
+  padding-top: 75px;
+}
+
+.price-list__container {
+  margin: 0 20px;
+}
+
+.price-list__title {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1;
+
+  margin: 0 0 35px;
+}
+
+.price-list__table {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 1.15;
+
+  @media(max-width: $mobile-width-only) {
+    border-spacing: 8px 0;
+  }
+}
+
+.price-list__number {
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
+}
+
+.price-list__service {
+  @media(max-width: $mobile-width-only) {
+    display: block;
+    font-weight: bold;
+  }
+}
+
+.price-list__washing {
+  @media(max-width: $mobile-width-only) {
+    display: block;
+    margin-bottom: 27px;
+  }
+}
+
+.price-list__price {
+  @media(max-width: $mobile-width-only) {
+    vertical-align: top;
+    text-align: end;
+  }
+}
+
