@@ -21,8 +21,8 @@
 
 .price-list__table {
   width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
+  max-width: 450px;
+  margin: 0 auto 12px;
   font-size: 18px;
   line-height: 1.15;
 
@@ -51,6 +51,12 @@
   }
 }
 
+.price-list__bracket {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
 .price-list__price {
   @media(max-width: $mobile-width-only) {
     vertical-align: top;
@@ -58,3 +64,30 @@
   }
 }
 
+.price-list__offer {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+  border: #4A4A4A solid 1px;
+
+}
+
+.price-list__offer-text {
+  display: block;
+  height: 58px;
+  margin: 0;
+  font-size: 20px;
+  line-height: 27px;
+  padding: 0 0 0 92px;
+  background: url("img/price-list_clock.svg") no-repeat 10px 50%;
+
+
+}
+
+.price-list__wrapper {
+  max-width: 350px;
+  height: 58px;
+  margin: 17px auto;
+  padding: 0 21px;
+}
