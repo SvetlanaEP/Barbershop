@@ -40,13 +40,25 @@
 
 .price-list__table {
   width: 100%;
-  max-width: 450px;
+
   margin: 0 auto 12px;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.15;
 
   @media(max-width: $mobile-width-only) {
-    border-spacing: 8px 0;
+    max-width: 450px;
+    font-size: 18px;
+  }
+
+  @media (min-width: $tablet-width) {
+    border-collapse: collapse;
+  }
+}
+
+.price-list__table td {
+  @media(min-width: $tablet-width) {
+    height: 56px;
+
   }
 }
 
@@ -54,12 +66,25 @@
   @media (max-width: $mobile-width-only) {
     display: none;
   }
+
+  @media(min-width: $tablet-width) {
+    width: 10%;
+    border: #4A4A4A solid 1px;
+    opacity: 0.3;
+    text-align: center;
+  }
 }
 
 .price-list__service {
+  font-weight: bold;
   @media(max-width: $mobile-width-only) {
     display: block;
-    font-weight: bold;
+  }
+
+  @media(min-width: $tablet-width) {
+    width: 40%;
+    border: #4A4A4A solid 1px;
+    padding-left: 20px;
   }
 }
 
@@ -67,6 +92,12 @@
   @media(max-width: $mobile-width-only) {
     display: block;
     margin-bottom: 27px;
+  }
+
+  @media(min-width: $tablet-width) {
+    width: 25%;
+    border: #4A4A4A solid 1px;
+    padding-left: 20px;
   }
 }
 
@@ -81,15 +112,26 @@
     vertical-align: top;
     text-align: end;
   }
+
+  @media(min-width: $tablet-width) {
+    border: #4A4A4A solid 1px;
+    padding-left: 20px;
+  }
 }
 
 .price-list__offer {
   position: relative;
   width: 100%;
-  max-width: 450px;
-  margin: 0 auto;
   border: #4A4A4A solid 1px;
 
+  @media (max-width: $mobile-width-only)  {
+    max-width: 450px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $tablet-width) {
+    height: 113px;
+  }
 }
 
 .price-list__offer-text {
@@ -101,12 +143,20 @@
   padding: 0 0 0 92px;
   background: url("img/price-list_clock.svg") no-repeat 10px 50%;
 
+  @media (min-width: $tablet-width) {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 30px;
+    padding-top: 45px;
+  }
 
 }
 
 .price-list__wrapper {
-  max-width: 350px;
-  height: 58px;
   margin: 17px auto;
   padding: 0 21px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
 }
