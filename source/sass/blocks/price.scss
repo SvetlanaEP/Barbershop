@@ -7,6 +7,15 @@
 
 .price-list__container {
   margin: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 64px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1060px;
+    margin: 0 auto;
+  }
 }
 
 .price-list__title {
