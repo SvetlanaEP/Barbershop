@@ -13,7 +13,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 1060px;
+    width: 960px;
     margin: 0 auto;
   }
 }
@@ -38,6 +38,14 @@
   }
 }
 
+.price-list__content {
+  @media(min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+
+  }
+}
+
 .price-list__table {
   width: 100%;
 
@@ -52,15 +60,15 @@
 
   @media (min-width: $tablet-width) {
     border-collapse: collapse;
+    height: 276px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 630px;
+    margin: 0;
   }
 }
 
-.price-list__table td {
-  @media(min-width: $tablet-width) {
-    height: 56px;
-
-  }
-}
 
 .price-list__number {
   @media (max-width: $mobile-width-only) {
@@ -132,6 +140,11 @@
   @media (min-width: $tablet-width) {
     height: 113px;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 270px;
+    height: 276px;
+  }
 }
 
 .price-list__offer-text {
@@ -141,7 +154,6 @@
   font-size: 20px;
   line-height: 27px;
   padding: 0 0 0 92px;
-  background: url("img/price-list_clock.svg") no-repeat 10px 50%;
 
   @media (min-width: $tablet-width) {
     text-align: center;
@@ -150,13 +162,29 @@
     padding-top: 45px;
   }
 
+  @media(min-width: $desktop-width) {
+    text-transform: none;
+    padding: 206px 0 0;
+    font-size: 20px;
+    line-height: 27px;
+  }
 }
 
 .price-list__wrapper {
   margin: 17px auto;
   padding: 0 21px;
+  height: 100%;
+  background: url("img/clock-illustration/clock-illustration-mobile.svg") no-repeat 20px 50%;
 
   @media (min-width: $tablet-width) {
     margin: 0;
+    background: url("img/clock-illustration/clock-illustration-tablet.svg") no-repeat 20px 50%;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    margin: 0 auto;
+    width: 140px;
+    background: url("img/clock-illustration/clock-illustration-desktop.svg") no-repeat 0 35px;
   }
 }
