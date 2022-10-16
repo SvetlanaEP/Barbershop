@@ -1,19 +1,19 @@
 .button {
   display: block;
-  margin: 0 auto;
   padding: 0;
   width: 90%;
 
   max-width: 280px;
   min-height: 50px;
 
-  text-transform: uppercase;
-  text-decoration: none;
-  color: black;
   font-family: 'PT Sans Narrow', serif;
   font-weight: bold;
   font-size: 18px;
-  line-height: 24px;
+  line-height: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
 
   border: 1px solid #C4C4C4;
 

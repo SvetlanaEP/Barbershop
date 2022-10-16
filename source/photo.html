@@ -12,7 +12,7 @@
     <a class="page-header__logo" href="index.html">
         <img src="img/logotype-mobile.svg" width="226" height="30" alt="Барбершоп «Бородинский»">
     </a>
-    <nav class="main-nav">
+    <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
         </button>
@@ -45,14 +45,19 @@
                 </li>
 
             </ul>
-            <div class="main-nav__list user-list">
+            <ul class="main-nav__list user-list">
+              <li class="user-list__item">
                 <a class="user-list__login" href="login.html">
-                    <svg class="user-list__login-icon" width="16" height="16">
-                        <use xlink:href="img/sprite.svg#icon-login"></use>    <!-- ЧТО-ТО НЕ ПОНЯТНОЕ-->
+                    <svg class="user-list__login-icon" width="16" height="16"
+                         viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7 2H14V14H7V16H16V0H7V2Z" fill="white"/>
+                      <path d="M7 9H0V7H7V4L11 8L7 12V9Z" fill="white"/>
                     </svg>
-                    Войти
+                  <span>Войти</span>
                 </a>
-            </div>
+              </li>
+
+            </ul>
         </div>
     </nav>
 </header>
@@ -61,6 +66,7 @@
     <h1 class="visually-hidden">Барбершоп «Бородинский» - истинно мужская классика</h1>
 
     <section class="our-works">
+      <div class="our-works__wrapper">
         <h2 class="our-works__title">Наши работы</h2>
         <a class="button-to-main button" href="index.html">На главную</a>
         <ul class="our-works__list">
@@ -141,51 +147,78 @@
                 </div>
             </li>
         </ul>
+        </div>
     </section>
 
     <section class="price-list">
+      <div class="price-list__container">
         <h2 class="price-list__title">Прейскурант</h2>
-        <div class="price-list__container">
-            <table class="price-list__table">
-                <tr>
-                    <td class="price-list__number">1</td>
-                    <td class="price-list__service">Классическая стрижка</td>
-                    <td class="price-list__washing">с мытьём головы</td>
-                    <td class="price-list__price">1 500 руб.</td>
-                </tr>
-                <tr>
-                    <td class="price-list__number">2</td>
-                    <td class="price-list__service">Современный вариант</td>
-                    <td class="price-list__washing">с мытьём головы</td>
-                    <td class="price-list__price">1 500 руб.</td>
-                </tr>
-                <tr>
-                    <td class="price-list__number">3</td>
-                    <td class="price-list__service">Индивидуальный подход</td>
-                    <td class="price-list__washing">с мытьём головы</td>
-                    <td class="price-list__price">2 000 руб.</td>
-                </tr>
-                <tr>
-                    <td class="price-list__number">4</td>
-                    <td class="price-list__service">Бритьё головы</td>
-                    <td class="price-list__washing">без мытья</td>
-                    <td class="price-list__price">500 руб.</td>
-                </tr>
-                <tr>
-                    <td class="price-list__number">5</td>
-                    <td class="price-list__service">Бритьё головы</td>
-                    <td class="price-list__washing">с мытьём головы</td>
-                    <td class="price-list__price">1 000 руб.</td>
-                </tr>
-            </table>
-            <div class="price-list__offer">
-                <p class="price-list__offer-text">С 10:00 до 14:00 скидка 20%</p>
+        <div class="price-list__content">
+          <table class="price-list__table">
+            <tr>
+              <td class="price-list__number">1</td>
+              <td class="price-list__service">Классическая стрижка</td>
+              <td class="price-list__washing">
+                <span class="price-list__bracket">(</span>
+                с мытьём головы
+                <span class="price-list__bracket">)</span>
+              </td>
+              <td class="price-list__price">1 500 руб.</td>
+            </tr>
+            <tr>
+              <td class="price-list__number">2</td>
+              <td class="price-list__service">Современный вариант</td>
+              <td class="price-list__washing">
+                <span class="price-list__bracket">(</span>
+                с мытьём головы
+                <span class="price-list__bracket">)</span>
+              </td>
+              <td class="price-list__price">1 500 руб.</td>
+            </tr>
+            <tr>
+              <td class="price-list__number">3</td>
+              <td class="price-list__service">Индивидуальный подход</td>
+              <td class="price-list__washing">
+                <span class="price-list__bracket">(</span>
+                с мытьём головы
+                <span class="price-list__bracket">)</span>
+              </td>
+              <td class="price-list__price">2 000 руб.</td>
+            </tr>
+            <tr>
+              <td class="price-list__number">4</td>
+              <td class="price-list__service">Бритьё головы</td>
+              <td class="price-list__washing">
+                <span class="price-list__bracket">(</span>
+                без мытья
+                <span class="price-list__bracket">)</span>
+              </td>
+              <td class="price-list__price">500 руб.</td>
+            </tr>
+            <tr>
+              <td class="price-list__number">5</td>
+              <td class="price-list__service">Бритьё головы</td>
+              <td class="price-list__washing">
+                <span class="price-list__bracket">(</span>
+                с мытьём головы
+                <span class="price-list__bracket">)</span>
+              </td>
+              <td class="price-list__price">1 000 руб.</td>
+            </tr>
+          </table>
+          <div class="price-list__offer">
+            <div class="price-list__wrapper">
+              <p class="price-list__offer-text">С 10:00 до 14:00 скидка 20%</p>
             </div>
+          </div>
         </div>
+      </div>
+
     </section>
 </main>
 
 @@include('parts-html/footer.html')
 
+<script src="js/main-nav.js"></script>
 </body>
 </html>

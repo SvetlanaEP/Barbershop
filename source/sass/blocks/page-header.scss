@@ -7,9 +7,18 @@
 
   @media (min-width: $tablet-width) {
     background-color: black;
+    min-height: 469px;
+    background-image: url("img/bg-desktop.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% -70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 648px;
+    background-position: 50% 0;
+    background-size: cover;
   }
 }
-
 
 .page-header__logo {
   min-height: 85px;
@@ -17,17 +26,6 @@
 
   @media (min-width: $tablet-width) {
       order: 2;
-      min-height: 400px;
-      background-color: black;
-      background-image: url("img/bg-desktop.jpg");
-      background-repeat: no-repeat;
-      background-position: 50% -90px;
-    }
-
-    @media (min-width: $desktop-width) {
-      height: 648px;
-      background-position: 50% 0;
-      background-size: cover;
     }
 }
 
