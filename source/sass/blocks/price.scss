@@ -5,8 +5,26 @@
   padding-top: 75px;
   padding-bottom: 34px;
 
+  ::before {
+    $height__grad--price: 34px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+
+    width: 100%;
+    height: $height__grad--price;
+    background-image:
+      linear-gradient(to top right, transparent 48%, #323232 2%, $lightgrey 50%),
+      linear-gradient(to top left, transparent 48%, #323232 2%, $lightgrey 50%);
+    background-position: top left, top right;
+    background-repeat: no-repeat;
+    background-size: 50.1% 100%;
+  }
+
   @media (max-width: $mobile-width-only) {
-    ::before {
+    ::after {
       $height__grad--price: 34px;
 
       position: absolute;
@@ -22,7 +40,22 @@
       background-position: top left, top right;
       background-repeat: no-repeat;
       background-size: 50.1% 100%;
+    }
+  }
 
+  @media (min-width: $tablet-width) {
+    padding-bottom: 56px;
+
+    ::before {
+      $height__grad--price: 50px;
+      height: $height__grad--price;
+    }
+  }
+
+  @media (min-width: $desktop-width){
+    padding-bottom: 83px;
+    ::before {
+      display: none;
     }
   }
 }
