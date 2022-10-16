@@ -1,8 +1,30 @@
 .price-list {
+  position: relative;
   background-color: #353535;
   color: white;
-
   padding-top: 75px;
+  padding-bottom: 34px;
+
+  @media (max-width: $mobile-width-only) {
+    ::before {
+      $height__grad--price: 34px;
+
+      position: absolute;
+      bottom: -$height__grad--price;
+      left: 0;
+      content: "";
+
+      width: 100%;
+      height: $height__grad--price;
+      background-image:
+        linear-gradient(to top right, transparent 48%, #323232 2%, #353535 50%),
+        linear-gradient(to top left, transparent 48%, #323232 2%, #353535 50%);
+      background-position: top left, top right;
+      background-repeat: no-repeat;
+      background-size: 50.1% 100%;
+
+    }
+  }
 }
 
 .price-list__container {
@@ -128,7 +150,6 @@
 }
 
 .price-list__offer {
-  position: relative;
   width: 100%;
   border: #4A4A4A solid 1px;
 
