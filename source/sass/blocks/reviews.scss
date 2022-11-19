@@ -95,19 +95,32 @@
 }
 
 .reviews__item {
+  display: none;
   margin: 0;
-  display: flex;
-  justify-content: center;
 
   @media(min-width: $tablet-width) {
-    padding: 30px 30px 0;
+    height: 160px;
     border-top: 1px solid #E5DDD5;
     border-bottom: 1px solid #E5DDD5;
   }
 
   @media(min-width: $desktop-width) {
-    padding: 0;
     border: 1px solid #E5DDD5;
+  }
+
+}
+
+.reviews__container {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+
+  @media(min-width: $tablet-width) {
+    margin: 30px;
+  }
+
+  @media(min-width: $desktop-width) {
+    margin: 0;
   }
 }
 
@@ -138,6 +151,11 @@
 
   @media(min-width: $tablet-width) {
     margin-left: 30px;
+  }
+
+  @media(min-width: $desktop-width) {
+    margin: 30px 70px;
+
   }
 }
 
@@ -204,17 +222,7 @@
   }
 }
 
-.reviews__item--none {
-  display: none;
-}
-
 .reviews__toggles {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  column-gap: 23px;
-  margin: 0 auto;
-  align-items: center;
 
   @media(min-width: $tablet-width) {
     position: relative;
@@ -227,27 +235,28 @@
 
   @media(min-width: $desktop-width) {
     margin-top: 42px;
-
   }
 }
 
-.slider__toggle {
-  padding: 0;
-  width: 10px;
-  height: 10px;
+.reviews__toggles .slider__toggle {
   border: 2px solid #353535;
-  background-color: transparent;
-  transform: rotate(45deg);
+}
 
-  @media(max-width: $mobile-width-only) {
-    &::after {
-      display: none;
-    }
+
+.reviews input {
+  display: none;
+}
+
+  input[type="radio"]:nth-of-type(1):checked ~ .reviews__toggles .slider__toggle:nth-of-type(1),
+  input[type="radio"]:nth-of-type(2):checked ~ .reviews__toggles .slider__toggle:nth-of-type(2),
+  input[type="radio"]:nth-of-type(3):checked ~ .reviews__toggles .slider__toggle:nth-of-type(3) {
+    background: #353535;
   }
-}
+  input[type="radio"]:nth-of-type(1):checked ~ .reviews__list .reviews__item:nth-of-type(1),
+  input[type="radio"]:nth-of-type(2):checked ~ .reviews__list .reviews__item:nth-of-type(2),
+  input[type="radio"]:nth-of-type(3):checked ~ .reviews__list .reviews__item:nth-of-type(3) {
+    display: block;
+  }
 
-.slider__toggle--current {
-  background-color: #353535;
-}
 
 

@@ -1,0 +1,20 @@
+.slider__toggle {
+  padding: 0;
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  transform: rotate(45deg);
+
+  &::after {
+    display: none;
+  }
+}
+
+.slider__toggles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 23px;
+  margin: 0 auto;
+  align-items: center;
+}

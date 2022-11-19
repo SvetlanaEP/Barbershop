@@ -53,7 +53,6 @@
                             <path d="M7 2H14V14H7V16H16V0H7V2Z" fill="white"/>
                             <path d="M7 9H0V7H7V4L11 8L7 12V9Z" fill="white"/>
                         </svg>
-                        </svg>
                         <span>Войти</span>
                     </a>
                 </li>
@@ -128,7 +127,11 @@
 
     <section class="advantages">
         <div class="advantages__wrapper slider">
-            <h2 class="visually-hidden">Наши преимущества</h2>
+          <h2 class="visually-hidden">Наши преимущества</h2>
+          <input type="radio" id="advantages-input-1" name="advantages" checked>
+          <input type="radio" id="advantages-input-2" name="advantages">
+          <input  type="radio" id="advantages-input-3" name="advantages">
+
             <ul class="advantages__list slider__list">
                 <li class="advantages__item advantages__item--fast slider__item">
                     <h3 class="advantages__title">Быстро</h3>
@@ -153,11 +156,16 @@
                     </p>
                 </li>
             </ul>
-            <p class="advantages__toggles slider__toggles">
-                <button class="slider__toggle slider__toggle--current" type="button">1</button>
-                <button class="slider__toggle" type="button">2</button>
-                <button class="slider__toggle" type="button">3</button>
-            </p>
+            <div class="advantages__toggles slider__toggles">
+
+              <label class="slider__toggle" for="advantages-input-1"></label>
+
+
+              <label class="slider__toggle" for="advantages-input-2"></label>
+
+
+              <label class="slider__toggle" for="advantages-input-3"></label>
+            </div>
         </div>
     </section>
 
@@ -203,38 +211,50 @@
     <section class="reviews">
         <div class="reviews__wrapper slider">
             <h2 class="reviews__title">Отзывы о нас</h2>
+          <input type="radio" id="reviews-input-1" name="reviews" checked>
+          <input type="radio" id="reviews-input-2" name="reviews">
+          <input  type="radio" id="reviews-input-3" name="reviews">
             <button class="reviews__write button">Оставить свой</button>
             <div class="reviews__list  slider__list">
                 <blockquote class="reviews__item slider__item">
+                  <div class="reviews__container">
                     <img class="reviews__author-image" src="img/reviows_author/picture-travis-mobile@1x.jpg"
-                         width="50" height="50" alt="Фото Трэвиса Бакера">
+                         width="52" height="52" alt="Фото Трэвиса Бакера">
                     <div class="reviews__author-info">
-                        <cite class="reviews__author-name">Трэвис Бакер</cite>
-                        <p class="reviews__text">
-                            Спасибо за лысину! Был проездом в Москве, заскочил побриться,
-                            чтобы было видно новую татуировку!
-                        </p>
+                      <cite class="reviews__author-name">Трэвис Бакер</cite>
+                      <p class="reviews__text">
+                        Спасибо за лысину! Был проездом в Москве, заскочил побриться,
+                        чтобы было видно новую татуировку!
+                      </p>
                     </div>
+                  </div>
+
                 </blockquote>
-                <blockquote class="reviews__item slider__item reviews__item--none">
+                <blockquote class="reviews__item slider__item">
+                  <div class="reviews__container">
                     <img class="reviews__author-image" src="img/reviows_author/picture-travis-mobile@1x.jpg"
-                         width="50" height="50" alt="Фото Джона Смита">
+                         width="52" height="52" alt="Фото Джона Смита">
                     <div class="reviews__author-info">
-                        <cite class="reviews__author-name">Джон Смит</cite>
-                        <p class="reviews__text">
-                            Отличную стрижку мне сделали ребята!
-                        </p>
+                      <cite class="reviews__author-name">Джон Смит</cite>
+                      <p class="reviews__text">
+                        Отличную стрижку мне сделали ребята!
+                      </p>
                     </div>
+                  </div>
+
                 </blockquote>
-                <blockquote class="reviews__item slider__item reviews__item--none">
+                <blockquote class="reviews__item slider__item">
+                  <div class="reviews__container">
                     <img class="reviews__author-image" src="img/reviows_author/picture-travis-mobile@1x.jpg"
-                         width="50" height="50" alt="Фото Ивана Бородайло">
+                         width="52" height="52" alt="Фото Ивана Бородайло">
                     <div class="reviews__author-info">
-                        <cite class="reviews__author-name">Иван Бородайло</cite>
-                        <p class="reviews__text">
-                            В Бородинском ваша борода в надёжных руках!
-                        </p>
+                      <cite class="reviews__author-name">Иван Бородайло</cite>
+                      <p class="reviews__text">
+                        В Бородинском ваша борода в надёжных руках!
+                      </p>
                     </div>
+                  </div>
+
                 </blockquote>
                 <button class="reviews__prev reviews__button" type="button">
                     <span class="visually-hidden">Предыдущий отзыв</span>
@@ -244,9 +264,9 @@
                 </button>
             </div>
             <div class="reviews__toggles slider__toggles">
-                <button class="slider__toggle slider__toggle--current" type="button">1</button>
-                <button class="slider__toggle" type="button">2</button>
-                <button class="slider__toggle" type="button">3</button>
+              <label class="slider__toggle" for="reviews-input-1"></label>
+              <label class="slider__toggle" for="reviews-input-2"></label>
+              <label class="slider__toggle" for="reviews-input-3"></label>
             </div>
         </div>
     </section>
@@ -256,6 +276,7 @@
 
 <script src="js/main-nav.js"></script>
 <script src="js/button-news.js"></script>
+<script src="js/slider.js"></script>
 
 </body>
 </html>
